@@ -1,0 +1,71 @@
+{
+  "poll": [
+    {
+      "id": "ooiwfaoasjicixc",
+      "createdBy": {
+        "userId": "doasjocisjaoidj"
+      },
+      "createdAt": 1620489237355,
+      "question": "What is your favorite ice cream?",
+      "answers": [
+        {
+          "id": "sodijcosdijf",
+          "text": "Pistachue",
+          "votes": 41
+        },
+        {
+          "id": "etagrehr",
+          "text": "Vanilla",
+          "votes": 24
+        },
+        {
+          "id": "sodijcferhreosdijf",
+          "text": "Oreo cookies",
+          "votes": 26
+        },
+        {
+          "id": "ukuyfkdstj",
+          "text": "Bubble gum",
+          "votes": 9
+        }
+      ]
+    },
+    {
+      "id": "shdfhgzdzg",
+      "createdBy": {
+        "userId": "sa;kjclkasnlcknsalknflsd"
+      },
+      "createdAt": 1620489237370,
+      "question": "Best tennis player in the world?",
+      "answers": [
+        {
+          "id": "sodijcosdijf",
+          "text": "Federer",
+          "votes": 29
+        },
+        {
+          "id": "etagrehr",
+          "text": "Nadal",
+          "votes": 12
+        },
+        {
+          "id": "sodijcferhreosdijf",
+          "text": "Sampras",
+          "votes": 4
+        },
+        {
+          "id": "ukuyfkdstj",
+          "text": "Agassi",
+          "votes": 2
+        }
+      ]
+    }
+  ],
+  "user": [
+    {
+      "fullName": "Eyal Alfasi",
+      "username": "eyalalf",
+      "password": "12345"
+    }
+  ]
+}

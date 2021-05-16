@@ -1,0 +1,94 @@
+/* Breakpoint mixins */
+
+@mixin for-mobile-layout-down {
+    @media (max-width: $mobile-breakpoint) {
+        @content;
+    }
+}
+
+@mixin for-mobile-layout-up {
+    @media (min-width: $mobile-breakpoint) {
+        @content;
+    }
+}
+
+@mixin for-tablet-layout-up {
+    @media (min-width: $tablet-breakpoint) {
+        @content;
+    }
+}
+
+@mixin for-desktop-sm-layout-up {
+    @media (min-width: $desktop-sm-breakpoint) {
+        @content;
+    }
+}
+
+@mixin for-desktop-md-layout-up {
+    @media (min-width: $desktop-md-breakpoint) {
+        @content;
+    }
+}
+
+@mixin for-desktop-lg-layout-up {
+    @media (min-width: $desktop-lg-breakpoint) {
+        @content;
+    }
+}
+
+/* Media  Mixins */
+@mixin aspect-ratio($width, $height) {
+    position: relative;
+    overflow: hidden;
+    &::before {
+        display: block;
+        content: "";
+        width: 100%;
+        padding-top: ($height / $width) * 100%;
+    }
+    > * {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+
+    > img {
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+// Mixin for removing hover efects on iphone screen
+@mixin hover-supported {
+    @media not all and (pointer: coarse) {
+        &:hover {
+            @content;
+        }
+    }
+}
+
+//Scrollbars
+@mixin scrollbars($size, $foreground-color, $background-color: mix($foreground-color, white, 50%)) {
+    // For Google Chrome
+    &::-webkit-scrollbar {
+        width: $size;
+        height: $size;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+        background: $foreground-color;
+        border-radius: 50px;
+    }
+    
+    &::-webkit-scrollbar-track {
+        background: $background-color;
+    }
+
+    // For Internet Explorer
+    & {
+        scrollbar-face-color: $foreground-color;
+        scrollbar-track-color: $background-color;
+    }
+}

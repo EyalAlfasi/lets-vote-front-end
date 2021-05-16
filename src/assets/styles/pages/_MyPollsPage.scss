@@ -1,0 +1,25 @@
+.my-polls-page-wrapper {
+    & .my-polls-page {
+        min-height: calc(100vh - 90px);
+        padding-top: 2rem;
+        & .my-polls-title {
+            font-size: 3rem;
+            color: $black;
+            @include for-mobile-layout-up{
+                font-size: 4rem;
+            }
+        }
+        & .my-polls-description {
+            margin-bottom: 3rem;
+            color: $lightgrey;
+            font-weight: 400;
+        }
+        & .polls-list {
+            & .poll-item-preview {
+                &:not(:last-child) {
+                    margin-bottom: 3rem;
+                }
+            }
+        }
+    }
+}

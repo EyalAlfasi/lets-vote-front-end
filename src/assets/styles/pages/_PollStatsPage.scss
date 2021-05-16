@@ -1,0 +1,50 @@
+.poll-preview-wrapper {
+    min-height: calc(100vh - 90px);
+    padding-top: 2rem;
+    color: $black;
+    & .poll-title {
+        font-size: 3rem;
+    }
+    & .poll-asked-by {
+        color: $lightgrey;
+        font-weight: 400;
+        & span {
+            color: $black;
+        }
+    }
+
+    & ul {
+        padding: 4rem 0 2rem;
+    }
+    & .watch-poll-stats-link {
+        color: $lightgrey;
+        font-size: 1.2rem;
+        transition: color 0.2s ease;
+        &:hover {
+            color: $grey;
+        }
+    }
+    & .voted-successfully-box {
+        padding: 50px 0;
+        margin: 50px 0;
+        text-align: center;
+        background-color: $verylightgrey;
+        border-radius: 20px;
+        & h2{
+            font-size: 3rem;
+            margin-bottom: 3rem;
+        }
+        & .voted-successfully-icon {
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            line-height: 100px;
+            background-color: $lightgreen;
+            border-radius: 50%;
+            color: $white;
+            & svg{
+                font-size: 100px;
+            }
+        }
+    }
+}

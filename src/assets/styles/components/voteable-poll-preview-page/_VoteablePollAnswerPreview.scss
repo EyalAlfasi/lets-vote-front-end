@@ -1,0 +1,67 @@
+.poll-answer-preview {
+    cursor: pointer;
+    position: relative;
+    border-radius: 4px;
+    padding: 8px;
+    height: 75px;
+    font-size: 1.4rem;
+    font-weight: 700;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0px 7px 14px #00000012;
+    gap: 20px;
+    &:hover {
+        box-shadow: 0px 10px 44px 10px #e9ebf3;
+        // transform: translateY(-5px);
+    }
+    &.picked {
+        border: 2px solid $lightgreen;
+        transform: translateX(10px);
+    }
+    & .percentage,
+    & .votes {
+        display: inline-block;
+        font-weight: 900;
+        background-color: $red;
+        border-radius: 50%;
+        min-width: 50px;
+        min-height: 50px;
+        text-align: center;
+        line-height: 50px;
+        margin-inline-end: 10px;
+    }
+    & .progress-fill {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        inset-inline-start: 0;
+        height: 100%;
+        background-color: $lightred;
+        z-index: 1;
+        transition: width 0.4s ease;
+    }
+    & *:not(.progress-fill) {
+        position: relative;
+        z-index: 2;
+    }
+    &:not(:last-child) {
+        margin-bottom: 2rem;
+    }
+    & .custom-checkbox {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 30px;
+        height: 30px;
+        border: 2px solid $lightgrey;
+        border-radius: 50%;
+        transition: background 0.2s ease, border 0.2s ease;
+        &.picked {
+            border: 2px solid $lightgreen;
+            background-color: $lightgreen;
+            & svg {
+                fill: $white;
+            }
+        }
+    }
+}

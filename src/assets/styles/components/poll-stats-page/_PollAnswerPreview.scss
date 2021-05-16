@@ -1,0 +1,39 @@
+.poll-stats-answer-preview {
+    padding: 2rem;
+    box-shadow: 0px 7px 14px #00000012;
+    & .top-section {
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 1.2rem;
+        & .percentage {
+            font-weight: 700;
+            font-size: 1.8rem;
+            text-align: center;
+        }
+    }
+    & .progress-bar {
+        position: relative;
+        height: 8px;
+        border-radius: 20px;
+        overflow: hidden;
+        margin-bottom: 1rem;
+        background-color: #EFEFEF;
+        & .progress-fill {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            inset-inline-start: 0;
+            height: 100%;
+            background-color: $red;
+            z-index: 1;
+            transition: width 0.4s ease;
+        }
+    }
+    &:not(:last-child) {
+        margin-bottom: 2rem;
+    }
+    & .votes {
+        font-size: 0.9rem;
+        color: $grey;
+    }
+}
