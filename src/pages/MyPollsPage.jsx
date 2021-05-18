@@ -1,11 +1,8 @@
-import React, { useEffect, useState } from 'react'
-import { Link } from "react-router-dom";
-import { pollsService } from '../services/pollsService.js'
-import MoreVertIcon from '@material-ui/icons/MoreVert';
-import IconButton from '@material-ui/core/IconButton';
+import React, { useEffect } from 'react'
 import { makeStyles } from '@material-ui/core/styles';
-import Button from '@material-ui/core/Button';
 import { PollItemPreview } from '../components/my-polls-page/PollItemPreview.jsx';
+import { useDispatch, useSelector } from 'react-redux';
+import { getPolls } from '../store/reducers/pollReducer.js';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -19,20 +16,12 @@ const useStyles = makeStyles((theme) => ({
 
 export const MyPollsPage = () => {
 
-    const [polls, setPolls] = useState(null)
     const classes = useStyles();
+    const polls = useSelector(state => state.pollReducer.polls)
+    const dispatch = useDispatch()
 
     useEffect(() => {
-        (async function () {
-            try {
-                const myPolls = await pollsService.query();
-                console.log(myPolls);
-                setPolls(myPolls)
-            }
-            catch (err) {
-                console.error('Can\'t fetch polls', err)
-            }
-        })()
+        dispatch(getPolls())
     }, [])
 
     return (
@@ -42,7 +31,7 @@ export const MyPollsPage = () => {
                 <h2 className="my-polls-description">All of the polls you created</h2>
                 <div className="polls-list">
                     {polls && polls.map(poll => (
-                        <PollItemPreview poll={poll} />
+                        <PollItemPreview key={poll.id} poll={poll} />
                     ))}
                 </div>
             </div>

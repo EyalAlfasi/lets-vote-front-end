@@ -5,6 +5,7 @@
 @import "setup/typography.scss";
 
 // Basics
+@import "basics/inputs.scss";
 @import "basics/helpers.scss";
 @import "basics/layout.scss";
 @import "basics/base.scss";
@@ -15,9 +16,11 @@
 @import "pages/MyPollsPage.scss";
 @import "pages/VoteablePollPreviewPage.scss";
 @import "pages/PollStatsPage.scss";
+@import "pages/EditPollPage.scss";
 
 // Components
 @import "components/AppHeader.scss";
 @import "components/my-polls-page/PollItemPreview.scss";
 @import "components/voteable-poll-preview-page/_VoteablePollAnswerPreview.scss";
 @import "components/poll-stats-page/_PollAnswerPreview.scss";
+@import "components/edit-poll-page/EditPollAnswerPreview.scss";

@@ -14,7 +14,7 @@ export const PollAnswerPreview = ({ answer, totalVotes }) => {
             <div className="progress-bar">
                 <div className="progress-fill" style={{ width: `${percentage}%` }}></div>
             </div>
-            <span className="votes">{totalVotes} Votes</span>
+            <span className="votes">{answer.votes} Votes</span>
         </li>
     )
 }

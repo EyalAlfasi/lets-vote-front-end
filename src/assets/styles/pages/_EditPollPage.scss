@@ -1,0 +1,23 @@
+.edit-poll-page-wrapper {
+    background-color: #fafafa;
+    padding-top: 2rem;
+    min-height: calc(100vh - 90px);
+    & .new-poll-title {
+        color: $black;
+        font-size: 2.5rem;
+    }
+    & .new-poll-description {
+        color: $lightgrey;
+        font-weight: 400;
+    }
+    & .inputs-list-container {
+        padding-top: 2rem;
+        & label {
+            color: $grey;
+            font-weight: 700;
+            display: inline-block;
+            margin-top: 2rem;
+            margin-bottom: 0.5rem;
+        }
+    }
+}

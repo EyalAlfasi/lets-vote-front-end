@@ -12,10 +12,10 @@ export function App() {
       <Router>
         <AppHeader />
         <Switch>
-          <Route exact path="/" component={MyPollsPage} />
-          <Route exact path="/poll/:id" component={VoteablePollPreviewPage} />
-          <Route exact path="/poll/stats/:id" component={PollStatsPage} />
           <Route exact path="/poll/edit/:id?" component={EditPollPage} />
+          <Route exact path="/poll/stats/:id" component={PollStatsPage} />
+          <Route exact path="/poll/:id" component={VoteablePollPreviewPage} />
+          <Route exact path="/" component={MyPollsPage} />
         </Switch>
       </Router>
     </div>
